@@ -1,0 +1,13 @@
+name: Daily Update Reminder
+
+on:
+  schedule:
+    - cron: "0 9 * * *"  # This schedule runs the action daily at 9:00 AM UTC.
+
+jobs:
+  send_reminder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Post Reminder
+        run: echo "Reminder: Please update your daily work progress in the repository!"
